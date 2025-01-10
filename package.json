@@ -1,0 +1,55 @@
+{
+	"name": "@utily/worker-template",
+	"version": "0.1.1",
+	"description": "Typescript template for Cloudflare Worker.",
+	"author": "Utily Contributors",
+	"license": "MIT",
+	"private": false,
+	"repository": "https://github.com/utily/worker-template",
+	"bugs": {
+		"url": "https://github.com/utily/worker-template/issues"
+	},
+	"homepage": "https://github.com/utily",
+	"main": "dist/_worker.js",
+	"typings": "dist/index.d.ts",
+	"type": "module",
+	"git": {
+		"tagName": "v${version}"
+	},
+	"github": {
+		"release": true
+	},
+	"scripts": {
+		"lint": "eslint --max-warnings=0 '**/*.{ts,tsx}'",
+		"fix": "eslint '**/*.{ts,tsx}' --fix",
+		"test": "vitest --run",
+		"coverage": "vitest --coverage",
+		"build": "NODE_ENV=production wrangler build",
+		"build:local": "NODE_ENV=development wrangler build",
+		"transpile": "tsc --project tsconfig.test.json",
+		"deploy": "NODE_ENV=production wrangler deploy --env production",
+		"login": "wrangler login",
+		"start": "NODE_ENV=development && wrangler dev --live-reload --env local --inspector-port 9229",
+		"clean": "rimraf dist node_modules coverage"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20241230.0",
+		"@typescript-eslint/eslint-plugin": "7.15.0",
+		"@typescript-eslint/parser": "7.15.0",
+		"eslint": "^8.57.0",
+		"eslint-plugin-prettierx": "github:utily/eslint-plugin-prettierx#utily-20231004",
+		"eslint-plugin-simple-import-sort": "^12.1.1",
+		"prettierx": "github:utily/prettierx#utily-20231004",
+		"@vitest/coverage-istanbul": "^2.1.8",
+		"vitest": "^2.1.8",
+		"rimraf": "^6.0.1",
+		"tslib": "^2.8.1",
+		"typescript": "^5.7.2",
+		"wrangler": "^3.100.0"
+	},
+	"dependencies": {
+		"cloudly-http": "0.2.0-alpha.21",
+		"cloudly-router": "0.2.0-alpha.18",
+		"gracely": "2.0.9"
+	}
+}
