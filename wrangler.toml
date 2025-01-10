@@ -1,5 +1,5 @@
 compatibility_date = "2024-12-30"
-name = "worker-template"
+name = "worker-kv-manager"
 workers_dev = true
 routes = []
 vars = {}
@@ -7,18 +7,21 @@ main = "./index.ts"
 minify = true
 upload_source_maps = true
 
-
 [env.production]
 vars = {}
 durable_objects.bindings = []
-kv_namespaces = []
+kv_namespaces = [
+	{ binding = "kvStore", id = "abc", preview_id = "abc" },
+]
 r2_buckets = []
 
 [env.local]
 routes = []
-vars = { adminSecret = "adminSecret" }
+vars = { adminSecret = "YWRtaW46cGFzc3dvcmQ=" }
 durable_objects.bindings = []
-kv_namespaces = []
+kv_namespaces = [
+	{ binding = "kvStore", id = "abc", preview_id = "abc" },
+]
 r2_buckets = []
 
 [dev]

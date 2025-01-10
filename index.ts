@@ -1,7 +1,7 @@
 import { Context } from "./Context"
 import { router } from "./router"
 
-import "./item"
+import "./kv"
 import "./version"
 
 export default {

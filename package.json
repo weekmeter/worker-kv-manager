@@ -1,13 +1,13 @@
 {
-	"name": "@utily/worker-template",
-	"version": "0.1.2",
-	"description": "Typescript template for Cloudflare Worker.",
+	"name": "@utily/worker-kv-manager",
+	"version": "0.0.0",
+	"description": "Backend for managing data in Cloudflare Workers KV.",
 	"author": "Utily Contributors",
 	"license": "MIT",
-	"private": false,
-	"repository": "https://github.com/utily/worker-template",
+	"private": true,
+	"repository": "https://github.com/utily/worker-kv-manager",
 	"bugs": {
-		"url": "https://github.com/utily/worker-template/issues"
+		"url": "https://github.com/utily/worker-kv-manager/issues"
 	},
 	"homepage": "https://github.com/utily",
 	"main": "dist/_worker.js",
@@ -33,23 +33,26 @@
 		"clean": "rimraf dist node_modules coverage"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20241230.0",
-		"@typescript-eslint/eslint-plugin": "7.15.0",
-		"@typescript-eslint/parser": "7.15.0",
+		"@cloudflare/workers-types": "^4.20250109.0",
+		"@typescript-eslint/eslint-plugin": "8.19.0",
+		"@typescript-eslint/parser": "8.19.0",
+		"@vitest/coverage-istanbul": "^2.1.8",
 		"eslint": "^8.57.0",
 		"eslint-plugin-prettierx": "github:utily/eslint-plugin-prettierx#utily-20231004",
 		"eslint-plugin-simple-import-sort": "^12.1.1",
 		"prettierx": "github:utily/prettierx#utily-20231004",
-		"@vitest/coverage-istanbul": "^2.1.8",
-		"vitest": "^2.1.8",
 		"rimraf": "^6.0.1",
 		"tslib": "^2.8.1",
-		"typescript": "^5.7.2",
-		"wrangler": "^3.100.0"
+		"typescript": "^5.7.3",
+		"vitest": "^2.1.8",
+		"wrangler": "^3.101.0"
 	},
 	"dependencies": {
 		"cloudly-http": "0.2.0-alpha.21",
 		"cloudly-router": "0.2.0-alpha.18",
-		"gracely": "2.0.9"
+		"cloudly-storage": "^0.10.16",
+		"gracely": "2.0.9",
+		"isly": "^0.1.26",
+		"isoly": "^3.0.2"
 	}
 }
