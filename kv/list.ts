@@ -15,6 +15,7 @@ export async function list(request: http.Request, context: Context): Promise<htt
 		result = await context.kv.list({ values: false, limit: 10, ...options })
 	return result
 }
+
 router.add("GET", "/kv", list)
 
 // type Options = Partial<Record<keyof storage.KeyValueStore.ListOptions, string>>
