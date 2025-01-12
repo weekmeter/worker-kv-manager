@@ -12,7 +12,7 @@ export async function list(request: http.Request, context: Context): Promise<htt
 	else if (gracely.Error.is(context.kv))
 		result = context.kv
 	else
-		result = await context.kv.list({ values: false, ...options })
+		result = await context.kv.list({ values: false, limit: 10, ...options })
 	return result
 }
 router.add("GET", "/kv", list)
