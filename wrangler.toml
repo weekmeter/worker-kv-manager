@@ -1,7 +1,7 @@
 compatibility_date = "2024-12-30"
 name = "worker-weekmeter-kv"
 workers_dev = true
-routes = ["https://app.weekmeter.com/kv*, https://app.weekmeter.com/version/kv*"]
+routes = ["https://app.weekmeter.com/kv*", "https://app.weekmeter.com/version/kv*"]
 vars = {}
 main = "./index.ts"
 minify = true
