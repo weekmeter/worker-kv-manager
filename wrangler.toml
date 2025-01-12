@@ -6,14 +6,9 @@ vars = {}
 main = "./index.ts"
 minify = true
 upload_source_maps = true
-
-[env.production]
-vars = {}
-durable_objects.bindings = []
 kv_namespaces = [
 	{ binding = "kvStore", id = "ea51c1dbf88a4ee9b0176c23a3af797b", preview_id = "ea51c1dbf88a4ee9b0176c23a3af797b" },
 ]
-r2_buckets = []
 
 [env.local]
 routes = []
