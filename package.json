@@ -34,8 +34,8 @@
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250109.0",
-		"@typescript-eslint/eslint-plugin": "8.19.0",
-		"@typescript-eslint/parser": "8.19.0",
+		"@typescript-eslint/eslint-plugin": "8.19.1",
+		"@typescript-eslint/parser": "8.19.1",
 		"@vitest/coverage-istanbul": "^2.1.8",
 		"eslint": "^8.57.0",
 		"eslint-plugin-prettierx": "github:utily/eslint-plugin-prettierx#utily-20231004",
@@ -50,9 +50,9 @@
 	"dependencies": {
 		"cloudly-http": "0.2.0-alpha.21",
 		"cloudly-router": "0.2.0-alpha.18",
-		"cloudly-storage": "^0.10.16",
+		"cloudly-storage": "^0.10.17",
 		"gracely": "2.0.9",
 		"isly": "^0.1.26",
-		"isoly": "^3.0.2"
+		"isoly": "^3.0.4"
 	}
 }
