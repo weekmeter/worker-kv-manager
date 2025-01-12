@@ -1,7 +1,7 @@
 import { http } from "cloudly-http"
-import { Context } from "../Context"
-import * as data from "../package.json"
-import { router } from "../router"
+import { Context } from "../../Context"
+import * as data from "../../package.json"
+import { router } from "../../router"
 
 async function fetch(request: http.Request, context: Context): Promise<http.Response.Like | any> {
 	const result: any = {
@@ -15,4 +15,4 @@ async function fetch(request: http.Request, context: Context): Promise<http.Resp
 
 	return result
 }
-router.add("GET", "/version", fetch)
+router.add("GET", "/kv/version", fetch)
