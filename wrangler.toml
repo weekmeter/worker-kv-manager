@@ -9,6 +9,7 @@ upload_source_maps = true
 kv_namespaces = [
 	{ binding = "kvStore", id = "2e7a54b646de484aa3fa3468c517a02b", preview_id = "2e7a54b646de484aa3fa3468c517a02b" },
 ]
+
 [observability.logs]
 enabled = true
 
