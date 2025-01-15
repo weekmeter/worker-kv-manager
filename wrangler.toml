@@ -1,7 +1,7 @@
 compatibility_date = "2024-12-30"
 name = "worker-kv-manager"
 workers_dev = true
-routes = ["https://api.weekmeter.app/kv*", "https://api.weekmeter.app/version/kv*"]
+routes = ["https://api.weekmeter.app/kv*", "https://api.weekmeter.app/version*"]
 vars = {}
 main = "./index.ts"
 minify = true
