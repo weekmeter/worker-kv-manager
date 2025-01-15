@@ -1,13 +1,13 @@
 compatibility_date = "2024-12-30"
 name = "worker-kv-manager"
 workers_dev = true
-routes = ["https://api.example.com/kv*", "https://api.example.com/version/kv*"]
+routes = ["https://api.weekmeter.app/kv*", "https://api.weekmeter.app/version/kv*"]
 vars = {}
 main = "./index.ts"
 minify = true
 upload_source_maps = true
 kv_namespaces = [
-	{ binding = "kvStore", id = "abc", preview_id = "abc" },
+	{ binding = "kvStore", id = "2e7a54b646de484aa3fa3468c517a02b", preview_id = "2e7a54b646de484aa3fa3468c517a02b" },
 ]
 [observability.logs]
 enabled = true
