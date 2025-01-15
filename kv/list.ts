@@ -11,8 +11,14 @@ export async function list(request: http.Request, context: Context): Promise<htt
 		result = gracely.client.unauthorized()
 	else if (gracely.Error.is(context.kv))
 		result = context.kv
-	else
-		result = await context.kv.list({ values: false, limit: 10, ...options })
+	else {
+		result = await context.kv.list({
+			values: false,
+			limit: 10,
+			...options,
+			...(request.search.values == "true" ? { values: true } : {}),
+		})
+	}
 	return result
 }
 
