@@ -15,4 +15,4 @@ async function fetch(request: http.Request, context: Context): Promise<http.Resp
 
 	return result
 }
-router.add("GET", "/version/kv", fetch)
+router.add("GET", "/version", fetch)

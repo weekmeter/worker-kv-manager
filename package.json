@@ -24,18 +24,18 @@
 		"fix": "eslint '**/*.{ts,tsx}' --fix",
 		"test": "vitest --run",
 		"coverage": "vitest --coverage",
-		"build": "wrangler deploy --dry-run --outdir=dist",
-		"build:local": "NODE_ENV=development wrangler deploy --dry-run --outdir=dist",
+		"build": "NODE_ENV=production wrangler build",
+		"build:local": "NODE_ENV=development wrangler build",
 		"transpile": "tsc --project tsconfig.test.json",
-		"deploy": "wrangler deploy",
+		"deploy": "NODE_ENV=production wrangler deploy --env production",
 		"login": "wrangler login",
 		"start": "NODE_ENV=development && wrangler dev --live-reload --env local --inspector-port 9229",
 		"clean": "rimraf dist node_modules coverage"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250109.0",
-		"@typescript-eslint/eslint-plugin": "8.19.1",
-		"@typescript-eslint/parser": "8.19.1",
+		"@typescript-eslint/eslint-plugin": "8.19.0",
+		"@typescript-eslint/parser": "8.19.0",
 		"@vitest/coverage-istanbul": "^2.1.8",
 		"eslint": "^8.57.0",
 		"eslint-plugin-prettierx": "github:utily/eslint-plugin-prettierx#utily-20231004",
@@ -50,9 +50,9 @@
 	"dependencies": {
 		"cloudly-http": "0.2.0-alpha.21",
 		"cloudly-router": "0.2.0-alpha.18",
-		"cloudly-storage": "^0.10.17",
+		"cloudly-storage": "^0.10.16",
 		"gracely": "2.0.9",
 		"isly": "^0.1.26",
-		"isoly": "^3.0.4"
+		"isoly": "^3.0.2"
 	}
 }
