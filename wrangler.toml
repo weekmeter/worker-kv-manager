@@ -9,6 +9,8 @@ upload_source_maps = true
 kv_namespaces = [
 	{ binding = "kvStore", id = "abc", preview_id = "abc" },
 ]
+[observability.logs]
+enabled = true
 
 [env.local]
 routes = []
